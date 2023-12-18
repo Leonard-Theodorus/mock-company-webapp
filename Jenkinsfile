@@ -7,7 +7,8 @@ pipeline {
    stages{
     stage('Test'){
         steps{
-            echo "JAVA_HOME: $JAVA_HOME"
+            sh "echo $JAVA_HOME"
+            echo "${env.JAVA_HOME}"
             sh './gradlew test'
         }
     }
