@@ -7,6 +7,7 @@ pipeline {
    stages{
     stage("stage 1"){
         steps{
+            sh "echo 55"
             sh "echo $JAVA_HOME"
             echo "${env.JAVA_HOME}"
         }
